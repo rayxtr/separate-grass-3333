@@ -29,23 +29,23 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("==========================================================\n"
-				+ "| Welcome To MS Hardware And Software Support  |\n"
-				+ "==========================================================\n");
+		System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+				+ "|	 Welcome To MS Hardware And Software Support  |\n"
+				+ "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 
 		
 		boolean i1 = true;
 		
 		while(i1) {
 			System.out.println("\n\n"
-					+ "________________________________\n"
-					+ "|                              |\n"
-					+ "| Please Select An User        |\n"
-					+ "|   1 - HOD                    |\n"
-					+ "|   2 - Engineer               |\n"
-					+ "|   3 - Employee               |\n"
-					+ "|   4 - Exit                   |\n"
-					+ "|______________________________|\n");
+					+ " *******************************\n"
+					+ "[                              ]\n"
+					+ "[ Tell Me Who are You?        ]\n"
+					+ "[   1 - HOD                    ]\n"
+					+ "[   2 - Engineer               ]\n"
+					+ "[   3 - Employee               ]\n"
+					+ "[   4 - Exit                   ]\n"
+					+ "[*******************************]\n");
 			
 			System.out.print("Enter Your Choice : ");
 			int ch1 = sc.nextInt();
