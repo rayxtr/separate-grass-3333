@@ -50,4 +50,5 @@ Factors to consider include cost of downtime, skills, retention, overheads, cust
 
 <br><br>
 
+<img src="https://github.com/rayxtr/separate-grass-3333/blob/main/MS%20Hardware%20and%20Software%20Support/mode.png?raw=true"/>
 
