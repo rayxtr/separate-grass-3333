@@ -14,7 +14,8 @@ Factors to consider include cost of downtime, skills, retention, overheads, cust
   
 <br><br>
 
-
+<h2>ER Diagram of Database model</h2>
+<br>
 <img src ="https://github.com/rayxtr/separate-grass-3333/blob/main/MS%20Hardware%20and%20Software%20Support/ER_Diagram.png?raw=true"/>
 <br> <br>
 <h3>Users:</h3>
@@ -49,6 +50,7 @@ Factors to consider include cost of downtime, skills, retention, overheads, cust
 <p>• Change His/Her Password</p>
 
 <br><br>
-
+<h2>Flow of System</h2>
+<br>
 <img src="https://github.com/rayxtr/separate-grass-3333/blob/main/MS%20Hardware%20and%20Software%20Support/mode.png?raw=true"/>
 
