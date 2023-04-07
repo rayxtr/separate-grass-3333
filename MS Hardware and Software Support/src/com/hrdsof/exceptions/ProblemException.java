@@ -6,6 +6,9 @@ public class ProblemException extends Exception {
 		// TODO Auto-generated constructor stub
 	}
 	
+	/**
+	 * @param message
+	 */
 	public ProblemException(String message) {
 		super(message);
 	}

@@ -21,6 +21,7 @@ public class ChangePasswordEmp {
 		EmployeeDao dao = new EmployeeDaoImpl();
 		
 		try {
+			//Changing password for employee
 			String result = dao.changePassword(empID, newPassword, oldPassword);
 			System.out.println("\n" + result);
 		} catch (EmployeeException e) {

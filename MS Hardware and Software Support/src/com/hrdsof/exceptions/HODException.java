@@ -7,6 +7,9 @@ package com.hrdsof.exceptions;
 			// TODO Auto-generated constructor stub
 		}
 		
+		/**
+		 * @param message
+		 */
 		public HODException(String message) {
 			super(message);
 		}

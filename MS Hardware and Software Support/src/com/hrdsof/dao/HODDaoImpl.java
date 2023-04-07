@@ -22,12 +22,22 @@ import com.hrdsof.model.Problem_Temp;
 
 
 public class HODDaoImpl implements HODDao{
+	/**
+	 *@param hodDto
+	 *@return
+	 *@throws HOD Exception
+	 */
+	
+
 	@Override
 	public String loginHOD(HODDto hodDto) throws HODException {
         String message = "Invalid Username or Password...";
 		
 		try(Connection conn = DataBaseUtility.provideConnection()) {
 			
+			/*
+			 * Checking if email and password matching with database
+			 */
 			PreparedStatement ps = conn.prepareStatement("SELECT * FROM HOD WHERE email = ? AND password = ?");
 			
 			ps.setString(1, hodDto.getEmail());
@@ -47,10 +57,16 @@ public class HODDaoImpl implements HODDao{
 		return message;
 	}
 
+	/**
+	 * @param password
+	 * @return
+	 * @throws HODException
+	 */
 	public boolean checkHOD(String password) throws HODException {
 		boolean flag = false;
 		
 		try(Connection conn =DataBaseUtility.provideConnection()) {
+			//Getting all details of HOD if password matches. 
 			PreparedStatement ps = conn.prepareStatement("SELECT * FROM HOD WHERE password = ?");
 			
 			ps.setString(1, password);
@@ -68,6 +84,7 @@ public class HODDaoImpl implements HODDao{
 		
 		return flag;
 	}
+	
 	
 	@Override
 	public String registerAnEngineer(Engineer engineer) throws EngineerException {

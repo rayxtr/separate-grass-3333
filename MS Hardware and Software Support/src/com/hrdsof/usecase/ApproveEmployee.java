@@ -8,7 +8,12 @@ import com.hrdsof.exceptions.EmployeeException;
 
 
 
+/**
+ * @author madhu
+ *
+ */
 public class ApproveEmployee {
+	
 	public static void approveAnEmp() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -18,10 +23,10 @@ public class ApproveEmployee {
 		System.out.print("Enter Your Password : ");
 		String password = sc.next();
 		
-		HODDao dao = new HODDaoImpl();
+		HODDao dao = new HODDaoImpl();  //HOD DAO interface for using methods
 		
 		try {
-			String result = dao.approveAnEmployee(empID, password);
+			String result = dao.approveAnEmployee(empID, password); //Approve Employee by id and password
 			System.out.println("\n" + result);
 		} catch (EmployeeException e) {
 			// TODO Auto-generated catch block

@@ -23,7 +23,8 @@ public class AssignAComplaintToAnEngineer {
 		HODDao dao = new HODDaoImpl();
 		
 		try {
-			String result = dao.assignAProblemToAnEngineer(engID, logID, password);
+			//Assigning a problem to engineer.
+			String result = dao.assignAProblemToAnEngineer(engID, logID, password); 
 			System.out.println("\n" + result);
 		} catch (ProblemException e) {
 			// TODO Auto-generated catch block

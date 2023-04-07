@@ -13,6 +13,13 @@ public class Problem_Temp {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * @param prob_temp_id
+	 * @param probDesc
+	 * @param category
+	 * @param launchedOn
+	 * @param empID
+	 */
 	public Problem_Temp(int prob_temp_id, String probDesc, String category, Timestamp launchedOn, int empID) {
 		super();
 		this.prob_temp_id = prob_temp_id;

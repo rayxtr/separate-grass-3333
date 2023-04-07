@@ -4,13 +4,25 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
+/*
+ * Data base Utility class
+ * URL , User name, password and driver
+ * Making Connection
+ * Register Driver 
+ */
+/**
+ * @author madhu
+ *
+ */
 public class DataBaseUtility {
 	private static String url;
 	private static String driverName;
 	private static String username;
 	private static String password;
 	
+	/*
+	 * DataBase Details 
+	 */
 	static {
 		ResourceBundle rb = ResourceBundle.getBundle("dbDetails");
 		
@@ -19,6 +31,9 @@ public class DataBaseUtility {
 		username = rb.getString("user");
 		password = rb.getString("pass");
 	}
+	/*
+	 * Providing Connection
+	 */
 	
 	public static Connection provideConnection() {
 		Connection conn = null;
@@ -29,6 +44,7 @@ public class DataBaseUtility {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		
 		try {
 			conn = DriverManager.getConnection(url, username, password);
