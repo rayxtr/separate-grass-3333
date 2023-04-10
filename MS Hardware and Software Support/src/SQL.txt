@@ -1,0 +1,97 @@
+Employee--
+
+1- Insert employee into Employee table.
+INSERT INTO EMPLOYEE (name, email, password, status) VALUES(?,?,?,?)
+
+2-Login employee with email and password.
+SELECT empID, STATUS FROM EMPLOYEE WHERE email = ? AND password = ?
+
+3- Checking status of employee.
+SELECT STATUS FROM EMPLOYEE WHERE empID = ? AND password = ?
+
+4- Get complaint of employee from problem_log table.
+SELECT logID FROM PROBLEM_LOG WHERE empID = ? AND probID = ? AND status = 'OPEN' ORDER BY LaunchedOn DESC LIMIT 1
+
+5- Register a complaint by employee into problem_log
+INSERT INTO PROBLEM_LOG (probID, empID, status, LaunchedOn) VALUES (?, ?, 'OPEN', CURRENT_TIMESTAMP)
+
+6- get all problems from problem table
+SELECT * FROM PROBLEM WHERE category = ? ORDER BY priority
+
+7- Show complaint status by employee.
+SELECT status FROM PROBLEM_LOG WHERE logID = ? AND empID = ?
+
+8-Change password for employee.
+UPDATE employee SET password = ? WHERE empID = ? AND password = ?
+
+9-To see all employee
+select * from employee;
+
+10- Get List of complaint histroy by employee
+SELECT logID, probID, empID, LaunchedOn, status FROM PROBLEM_LOG WHERE empID = ? ORDER BY status DESC
+
+Engineer--
+
+1- Login Engineer
+SELECT engID FROM engineer WHERE email = ? AND password = ?
+
+2-Check Engineer
+SELECT * FROM ENGINEER WHERE engID = ? AND password = ?
+
+3- Get Problem Status assigned to engineer.
+SELECT status FROM PROBLEM_LOG WHERE logID = ? AND engID = ?
+
+4- Update problem status by engineer.
+UPDATE problem_log SET status = ?, StartedWorking = CURRENT_TIMESTAMP WHERE logID = ?  //started working
+UPDATE problem_log SET status = ?, ClosedOn = CURRENT_TIMESTAMP WHERE logID = ?  //closed
+
+5- Change password for engineer.
+UPDATE engineer SET password = ? WHERE engID = ? AND password = ?
+
+6- Show Problem assigned to engineer.
+SELECT pl.logID, p.probDesc, p.priority, pl.empID, pl.status FROM problem p INNER JOIN problem_log pl ON p.probID = pl.probID AND pl.engID = ? ORDER BY pl.status
+
+7- To see all engineer
+select * from engineer;
+
+HOD---
+
+1- Login HOD
+SELECT * FROM HOD WHERE email = ? AND password = ?
+
+2- Check HOD
+SELECT * FROM HOD WHERE password = ?
+
+3-Register a Engineer by HOD
+INSERT INTO ENGINEER (name, email, password, category) VALUES (?,?,?,?)
+
+4- Delete any engineer.
+DELETE FROM ENGINEER WHERE engID = ?
+
+5- Show All problems which are not assigned to engineer.
+SELECT pl.logID, p.probDesc, pl.empID, pl.launchedOn, p.priority FROM problem p INNER JOIN problem_log pl ON p.probID = pl.probID AND p.category = ? AND pl.engID IS NULL
+
+6-Show All Assigned Problems
+SELECT pl.logID, p.probDesc, pl.empID, pl.launchedOn, p.priority, pl.engID, pl.status, pl.startedWorking, pl.closedOn FROM problem p INNER JOIN problem_log pl ON p.probID = pl.probID AND p.category = ? AND pl.engID IS NOT NULL ORDER BY pl.status DESC
+
+7-Show All unverified employee
+SELECT empID, name, email FROM employee WHERE status = 'UNVERIFIED'
+
+8-Approve an Employee
+UPDATE employee SET status = 'VERIFIED' WHERE empID = ?
+
+9-Assign a problem to engineer
+UPDATE problem_log SET engID = ? WHERE logID = ?
+
+10- Launch a complaint.
+INSERT INTO problem_log (probID, empID, LaunchedOn, status) VALUES (?, ?, ?, 'OPEN') 
+
+11- Delete Temporarily Problem
+"DELETE FROM problem_temp WHERE prob_temp_id = ?
+
+12- Change priority of a problem
+INSERT INTO problem (probDesc, category, priority) VALUES (?, ?, ?)
+
+13- Check all temporarily problems
+select * from problem_temp;
+
