@@ -26,6 +26,10 @@ import com.hrdsof.usecase.UpdateProblemStatus;
 public class Main {
 
 	
+	/**
+	 * @param args
+	 */
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -54,6 +58,7 @@ public class Main {
 			case 1: System.out.println("\n\nHOD Login");
 			        System.out.println("=========");
 			        
+			        //Checking if HOD is login.
 			        if(LoginHOD.logHOD()) {
 			        	boolean i2 = true;
 			        	
@@ -122,7 +127,7 @@ public class Main {
 			        
 			case 2: System.out.println("\n\nEngineer Login");
 	                System.out.println("==============");
-	                int engID = LoginEngineer.loginEngg();
+	                int engID = LoginEngineer.loginEngg(); //Checking if Engineer is logged in.
 	                if(engID != 0) {
 	                	boolean i2 = true;
 	                	while(i2) {

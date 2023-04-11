@@ -18,9 +18,10 @@ public class ChangePassword {
 		System.out.print("Enter Old Password : ");
 		String oldPassword = sc.next();
 		
-		EngineerDao dao = new EngineerDaoImpl();
+		EngineerDao dao = new EngineerDaoImpl(); //EngineerDao interface 
 		
 		try {
+			// Changing password for engineer 
 			String result = dao.changePassword(engID, newPassword, oldPassword);
 			System.out.println("\n" + result);
 		} catch (EngineerException e) {

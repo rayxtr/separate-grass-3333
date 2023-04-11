@@ -10,6 +10,12 @@ public class Problem {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * @param probID
+	 * @param probDesc
+	 * @param category
+	 * @param priority
+	 */
 	public Problem(int probID, String probDesc, String category, String priority) {
 		super();
 		this.probID = probID;

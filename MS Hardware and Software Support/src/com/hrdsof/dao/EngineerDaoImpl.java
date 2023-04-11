@@ -12,7 +12,18 @@ import com.hrdsof.dto.ProblemENggDto;
 import com.hrdsof.exceptions.EngineerException;
 import com.hrdsof.exceptions.ProblemException;
 
+/**
+ * @author madhu
+ *
+ */
 public class EngineerDaoImpl implements EngineerDao {
+	
+	
+	/**
+	 *@param EngineerDtoCred cred
+	 *@return
+	 *@throws EngineerException
+	 */
 	@Override
 	public int loginEngineer(EngineerDtoCred cred) throws EngineerException {
 		int engID = 0;
@@ -38,6 +49,12 @@ public class EngineerDaoImpl implements EngineerDao {
 		return engID;
 	}
 	
+	/**
+	 * @param engID
+	 * @param password
+	 * @return
+	 * @throws EngineerException
+	 */
 	public boolean checkEngineer(int engID, String password) throws EngineerException {
 		boolean flag = false;
 		
@@ -61,6 +78,12 @@ public class EngineerDaoImpl implements EngineerDao {
 		return flag;
 	}
 	
+	/**
+	 * @param complaintID
+	 * @param engID
+	 * @return
+	 * @throws ProblemException
+	 */
 	public String getProblemStatus(int complaintID, int engID) throws ProblemException {
 		String result = "No Problems Found...";
 		
@@ -84,6 +107,14 @@ public class EngineerDaoImpl implements EngineerDao {
 		return result;
 	}
 
+	/**
+	 * @param complaintID
+	 * @param status
+	 * @param engID
+	 * @param password
+	 * @return
+	 * @throws ProblemException
+	 */
 	@Override
 	public String updateProblemStatus(int complainID, String status, int engID, String password) throws ProblemException {
 		String message = "No Complaint Found...";
@@ -131,6 +162,13 @@ public class EngineerDaoImpl implements EngineerDao {
 		return message;
 	}
 
+	/**
+	 *@param engID
+	 *@param newPassword
+	 *@param oldPassword
+	 *@return
+	 *@throws EngineerException
+	 */
 	@Override
 	public String changePassword(int engID, String newPassword, String oldPassword) throws EngineerException {
 		String message = "Wrong Password Provided...";
@@ -154,7 +192,13 @@ public class EngineerDaoImpl implements EngineerDao {
 		
 		return message;
 	}
-
+	
+	/**
+	 *@param engID
+	 *@param status
+	 *@return
+	 *@throws ProblemException
+	 */
 	@Override
 	public List<ProblemENggDto> showProblemsAssigned(int engID, String status) throws ProblemException {
 		List<ProblemENggDto> dtos = new ArrayList<>();

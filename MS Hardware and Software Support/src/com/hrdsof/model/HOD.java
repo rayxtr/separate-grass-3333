@@ -9,6 +9,11 @@ public class HOD {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * @param name
+	 * @param email
+	 * @param password
+	 */
 	public HOD(String name, String email, String password) {
 		super();
 		this.name = name;

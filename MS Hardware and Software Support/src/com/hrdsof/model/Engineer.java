@@ -1,5 +1,9 @@
 package com.hrdsof.model;
 
+/**
+ * @author madhu
+ *
+ */
 public class Engineer {
 	private int engID;
 	private String name;
@@ -11,6 +15,13 @@ public class Engineer {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * @param engID
+	 * @param name
+	 * @param email
+	 * @param password
+	 * @param category
+	 */
 	public Engineer(int engID, String name, String email, String password, String category) {
 		super();
 		this.engID = engID;
@@ -60,6 +71,7 @@ public class Engineer {
 		this.category = category;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Engineer [engID=" + engID + ", name=" + name + ", email=" + email + ", password=" + password

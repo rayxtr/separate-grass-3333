@@ -1,5 +1,9 @@
 package com.hrdsof.dto;
 
+/**
+ * @author madhu
+ *
+ */
 public class EmployeeDtoCred {
 
 	private String email;

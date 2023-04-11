@@ -14,6 +14,16 @@ public class Problem_Log {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * @param logID
+	 * @param probID
+	 * @param empID
+	 * @param engID
+	 * @param status
+	 * @param launchedOn
+	 * @param startedWorking
+	 * @param closedOn
+	 */
 	public Problem_Log(int logID, int probID, int empID, int engID, String status, String launchedOn,
 			String startedWorking, String closedOn) {
 		super();
